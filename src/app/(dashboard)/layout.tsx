@@ -1,5 +1,5 @@
 "use client"
-
+import OnboardingTour from "@/components/OnboardingTour";
 import { useEffect, useState } from "react";
 import { Badge, Layout, Menu } from "antd";
 import useSWR from 'swr';
@@ -37,6 +37,7 @@ import {
     BgColorsOutlined,
 } from "@ant-design/icons";
 import AnnouncementBar from "@/components/common/AnnouncementBar";
+import { DashboardIcon, CatalogIcon, ProductsIcon, OrdersIcon, CustomersIcon, AnalyticsIcon, SettingsIcon } from "@/svg/index";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -60,6 +61,42 @@ export default function RootLayout({ children }: Readonly<{
 
     const SIDEBAR_MENU: MenuItem[] = [
         // ── Core ───────────────────────────────────
+
+        {
+    icon: <DashboardIcon />,
+    label: <span className="tour-dashboard"><Link href="/">Dashboard</Link></span>,
+    key: '/'
+  },
+  {
+    icon: <CatalogIcon />,
+    label: <span className="tour-catalog"><Link href="/catalogs">Catalogs</Link></span>,
+    key: '/catalogs'
+  },
+  {
+    icon: <ProductsIcon />,
+    label: <span className="tour-inventory"><Link href={"/inventory"}>Inventory</Link></span>,
+    key: '/inventory'
+  },
+  {
+    icon: <OrdersIcon />,
+    label: <span className="tour-orders"><Link href={"/orders"}>Orders</Link></span>,
+    key: '/orders'
+  },
+  {
+    icon: <CustomersIcon />,
+    label: <span className="tour-customers"><Link href={"/customers"}>Customers</Link></span>,
+    key: '/customers'
+  },
+  {
+    icon: <AnalyticsIcon />,
+    label: <span className="tour-analytics"><Link href={"/analytics"}>Analytics</Link></span>,
+    key: '/analytics'
+  },
+  {
+    icon: <SettingsIcon />,
+    label: <span className="tour-settings"><Link href={"/settings"}>Settings</Link></span>,
+    key: '/settings'
+  },
         {
             icon: <AppstoreOutlined />,
             label: <Link href="/">Dashboard</Link>,
@@ -204,6 +241,7 @@ if (["/analytics", "/reports"].some(p => pathname.startsWith(p)))    return ["gr
             <AnnouncementBar />
 
             <Layout style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+                <OnboardingTour />
                 <Sider
                     breakpoint="md"
                     className="kat-sidebar"
