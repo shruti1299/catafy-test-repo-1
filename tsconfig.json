@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/svg/*": ["./public/svg/*"],
+      "@/images/*": ["./public/images/*"],
+      "@/constant/*": ["./src/constant/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/interfaces/*": ["./src/interfaces/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/api/*": ["./src/api/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "public/svg/catalog_icons/add_icon.tsx", "public/svg/catalog_icons/arrow_icon.tsx", "public/svg/catalog_icons/correc_icon.tsx", "public/svg/catalog_icons/double_arrow_icon.tsx", "public/svg/catalog_icons/edit_icon.tsx", "public/svg/catalog_icons/eye_icon.tsx", "public/svg/catalog_icons/search_icon.tsx", "public/svg/catalog_icons/setting_icon.tsx", "public/svg/catalog_icons/share_icon.tsx", "public/svg/catalog_icons/view_icon.tsx"],
+  "exclude": ["node_modules"]
+}

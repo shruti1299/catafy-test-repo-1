@@ -1,0 +1,538 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+.body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+.body main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.body .content-container {
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* ═══════════════════════════════════════════════
+   SIDEBAR — dark professional
+═══════════════════════════════════════════════ */
+.body .kat-sidebar {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.18);
+}
+
+/* collapse trigger strip */
+.body .kat-sidebar .ant-layout-sider-trigger {
+  background: #1e293b !important;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.5);
+}
+.body .kat-sidebar .ant-layout-sider-trigger:hover {
+  background: #334155 !important;
+  color: #fff;
+}
+
+/* Ant Design icons use currentColor — inherit from menu item color */
+.kat-sidebar .anticon {
+  font-size: 15px !important;
+  transition: color 0.2s;
+}
+
+/* ── Logo area ─────────────────────────── */
+.kat-sidebar .kat-logo,
+.kat-sidebar .kat-clogo {
+  text-align: center;
+  padding: 10px 0 10px;
+}
+.kat-sidebar .kat-logo img  { width: auto; height: 65px; }
+.kat-sidebar .kat-clogo img { width: auto; height: 40px; }
+
+/* ── Menu items ────────────────────────── */
+.kat-menu .ant-menu-item {
+  border-radius: 8px !important;
+  margin-bottom: 2px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  color: rgba(255,255,255,0.65) !important;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.kat-menu .ant-menu-item:hover {
+  background: rgba(255,255,255,0.08) !important;
+  color: #fff !important;
+}
+/* icon color follows text color via currentColor */
+
+/* active / selected */
+.kat-menu .ant-menu-item-selected {
+  background: linear-gradient(90deg, #4f46e5, #6366f1) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(99,102,241,0.35);
+}
+.kat-menu .ant-menu-item-selected a   { color: #fff !important; }
+
+/* menu links */
+.kat-menu .ant-menu-item a {
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+}
+
+/* ── Plan card ─────────────────────────── */
+.side-plan-detail {
+  width: calc(100% - 32px);
+  margin: 0 16px 20px;
+  position: absolute;
+  bottom: 48px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 12px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.side-plan-detail:hover { background: rgba(255,255,255,0.12); }
+.side-plan-detail a { color: #fff !important; display: block; }
+
+.side-plan-detail .plan-icon {
+  font-size: 20px;
+  color: #facc15;
+  margin-bottom: 4px;
+}
+.side-plan-detail .plan-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+.side-plan-detail .plan-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin: 2px 0 4px;
+}
+.side-plan-detail .plan-upgrade {
+  font-size: 11px;
+  color: #818cf8;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* ═══════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════ */
+.kat-navbar.ant-layout-header {
+  background: #fff !important;
+  padding: 0 20px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left { line-height: normal; }
+
+.welcome-box h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.welcome-box a {
+  font-size: 11px;
+  color: #6366f1;
+  text-decoration: none;
+}
+.welcome-box a:hover { text-decoration: underline; }
+
+/* navbar icon buttons */
+.navbar-icon-btn.ant-btn {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  font-size: 18px !important;
+  color: #374151 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+.navbar-icon-btn.ant-btn:hover {
+  background: #f1f5f9 !important;
+  color: #4f46e5 !important;
+}
+
+/* bulk upload button */
+.bulk-upload-btn.ant-btn {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  background: linear-gradient(90deg, #4f46e5, #6366f1) !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.3) !important;
+}
+.bulk-upload-btn.ant-btn:hover {
+  box-shadow: 0 4px 12px rgba(99,102,241,0.45) !important;
+  transform: translateY(-1px);
+}
+
+/* store avatar */
+.store-avatar {
+  transition: box-shadow 0.2s;
+}
+.store-avatar:hover {
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.catlog-sidebar {
+  margin-bottom: 20px;
+  height: calc(100vh - 100px);
+  /* overflow-y: scroll; */
+}
+
+.catlog-sidebar .ant-card-body,
+.catlog-sidebar .ant-card-header {
+  padding: 1rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.body .ant-list-items .ant-list-item {
+  cursor: pointer;
+}
+
+.body .ant-list-items .ant-list-item.active {
+  background-color: #f3f6ff;
+}
+
+.body .ant-list-items .ant-list-item:hover,
+.body .ant-list-items .ant-list-item:focus,
+.body .ant-list-items .ant-list-item:active {
+  background-color: #f3f6ff;
+}
+.kdyz-upload .ant-upload {
+  width: 100% !important;
+}
+
+.kdyz-product-list img {
+  border-radius: 6px;
+}
+.setting-menu .ant-menu-item svg {
+  margin-right: 20px;
+}
+
+/* Settings sidebar — match catalog panel style */
+.setting-menu.ant-menu-inline {
+  padding: 6px 8px;
+}
+.setting-menu .ant-menu-item {
+  border-radius: 7px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  margin-block: 2px !important;
+  font-size: 13px;
+  color: #475569;
+}
+.setting-menu .ant-menu-item:hover {
+  background: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+.setting-menu .ant-menu-item-selected {
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  font-weight: 600;
+}
+.setting-menu .ant-menu-item-selected .anticon {
+  color: #6366f1 !important;
+}
+
+.text-2 {
+  font-size: 0.9em;
+}
+
+.text-3 {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.stats {
+  position: absolute;
+  right: 10px;
+  font-size: 35px;
+  color: #ddd;
+}
+
+/* legacy — kept for any other components referencing navbar-btn */
+.navbar-right .navbar-btn {
+  font-size: 20px;
+  color: #374151;
+}
+.navbar-right button:hover { color: #4f46e5; cursor: pointer; }
+
+.quick-action.ant-dropdown-menu {
+  display: flex;
+}
+
+.quick-action.ant-dropdown-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem !important;
+}
+
+.quick-action.ant-dropdown-menu li:hover {
+  cursor: pointer;
+  color: #1677ff;
+}
+
+.quick-action.ant-dropdown-menu li svg {
+  font-size: 25px;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-box {
+  line-height: normal !important;
+}
+
+.welcome-box h3,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-box a {
+  margin-top: 3px;
+  font-size: 0.8em;
+  color: #1677ff;
+}
+
+.catalog-list-box .ant-col .ant-card-body {
+  padding: 0 !important;
+}
+
+.catalog-list-box .ant-col .ant-card-body .ant-list-pagination {
+  margin-block-start: 15px;
+}
+
+.catalog-list-box .ant-col .ant-card-body .ant-skeleton {
+  padding: 22px !important;
+}
+
+.catalog-list-box .fixed-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* side-plan-detail styles moved to sidebar section above */
+
+.theme-box {
+  border-radius: 10;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.theme-box:hover,
+.theme-box.active {
+  background-color: #e6f4ff;
+  border: 1px solid #1677ff;
+}
+
+.link-underline {
+  text-decoration: underline;
+  color: #1677ff;
+}
+
+.order-status-segment .ant-segmented-group {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+
+/* ── Tablet & below (≤ 800px) ─────────────────── */
+@media (max-width: 800px) {
+  .stats {
+    font-size: 25px;
+  }
+  .welcome-box {
+    font-size: 10px;
+  }
+  .kat-sidebar .kat-logo,
+  .kat-sidebar .kat-clogo {
+    margin: 0.5em;
+  }
+  .hidden-sm {
+    display: none;
+    width: 0px;
+  }
+  /* Reduce navbar padding on tablet */
+  .kat-navbar.ant-layout-header {
+    padding: 0 12px !important;
+  }
+}
+
+/* ── Mobile (≤ 640px) ─────────────────────────── */
+@media (max-width: 640px) {
+  /* Content container */
+  .body .content-container {
+    padding: 12px;
+  }
+
+  /* Announcement bar wraps text on small screens */
+  .announcement-bar-text {
+    font-size: 11px !important;
+  }
+
+  /* Navbar tighter */
+  .kat-navbar.ant-layout-header {
+    padding: 0 10px !important;
+    height: 52px !important;
+  }
+
+  /* Navbar welcome box smaller */
+  .welcome-box h3 {
+    font-size: 13px;
+  }
+
+  /* Cards: reduce padding */
+  .ant-card-body {
+    padding: 12px !important;
+  }
+
+  /* Drawers: full width on mobile */
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+}
+
+/* ── Small mobile (≤ 576px) ───────────────────── */
+@media (max-width: 576px) {
+  .ant-segmented {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-tag {
+    font-size: 11px;
+  }
+
+  .order-status-segment .ant-segmented-group {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .order-status-segment .ant-segmented-item {
+    flex: 0 0 auto;
+  }
+
+  /* Dashboard stat grid: 2 cols forced */
+  .dash-stat-col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Tables: horizontal scroll always visible */
+  .ant-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Form items: stack labels */
+  .ant-form-item-label {
+    font-size: 12px;
+  }
+
+  /* Modals: full width */
+  .ant-modal {
+    max-width: calc(100vw - 16px) !important;
+    margin: 8px auto !important;
+  }
+
+  /* Float button: lower bottom offset on mobile */
+  .ant-float-btn {
+    inset-block-end: 70px !important;
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 10;
+}

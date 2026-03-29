@@ -1,0 +1,68 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.reg-sidebar {
+    height: auto;
+    background-color: #0C0E48;
+    color: #fff;
+    display: flex !important;
+    padding: 40px;
+    /* height: 100vh; */
+    align-items: center;
+    justify-content: center !important;
+}
+
+.direct-approach {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.chat-button {
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+.signup-form .ant-form-item {
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 780px) {
+    .reg-sidebar {
+      height: auto;
+      padding: 10px;
+    }
+    .signup-container{
+        overflow-y: scroll;
+        height: auto;
+    }
+    .body main{
+        height: auto;
+    }
+    .reg-sidebar h1, .signup-container h1{
+        font-size: 1.2em;
+    }
+    .reg-sidebar p, .signup-container p{
+        font-size: 0.9em;
+    }
+  }
